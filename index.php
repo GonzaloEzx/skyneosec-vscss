@@ -6,7 +6,7 @@
   <!-- Tecnologías y Socios -->
   <?php include 'includes/socios.php'; ?>
   <!-- Sección: Quiénes somos -->
-  <?php include 'includes/about-as.php'; ?>
+  <?php include 'includes/quienes-somos.php'; ?>
   <!-- Sección de servicios -->
   <?php include 'includes/servicios-home.php'; ?>
   <!-- Hero principal -->

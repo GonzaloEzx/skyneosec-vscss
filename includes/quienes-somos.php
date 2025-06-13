@@ -1,11 +1,11 @@
-<section id="quienes-somos" class="py-5" style="background-color: #D4C9BE;">
+<section id="quienes-somos" class=" py-5" style="background-color: #D4C9BE;">
     <div class="container">
         <div class="row align-items-center">
 
             <!-- Columna izq: Imagen representativa -->
             <div class="col-md-6 mb-4 mb-md-0">
                 <img
-                    src="/img/security_abstract.jpg"
+                    src="img/logoSeba.png"
                     alt="Equipo SkyNeo Security"
                     class="img-fluid rounded shadow-sm"
                     style="max-height: 400px; object-fit: cover;">
