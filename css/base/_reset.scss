@@ -1,0 +1,22 @@
+// =============================================================================
+//                              base/_reset.scss
+// =============================================================================
+
+// Reset mínimo para garantizar consistencia en navegadores
+
+html,
+body {
+  height: 100%; // Para que <body> pueda usar display: flex y el footer quede abajo
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box; // Box-sizing global para evitar sorpresas con padding/margin
+}
+
+// =============================================================================
+// Fin de base/_reset.scss
+// =============================================================================

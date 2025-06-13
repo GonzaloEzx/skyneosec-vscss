@@ -1,0 +1,55 @@
+// =============================================================================
+//                       components/_marquee.scss
+// =============================================================================
+
+// Importamos variables desde css/base/_variables.scss
+@use "../base/variables" as v;
+
+/* -------------------------------------------------------------------------- */
+/* 1) Contenedor principal del carrusel                                        */
+/* -------------------------------------------------------------------------- */
+.marquee {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  background-color: v.$color-primary-bg; // #1f2937
+  padding: 2rem 0; // espaciado arriba y abajo
+}
+
+/* -------------------------------------------------------------------------- */
+/* 2) Contenido en scroll horizontal                                           */
+/* -------------------------------------------------------------------------- */
+.marquee-content {
+  display: flex;
+  gap: 2rem; // espacio entre cada logo
+  animation: marquee 20s linear infinite; // animación contínua
+}
+
+/* -------------------------------------------------------------------------- */
+/* 3) Keyframes para desplazar los logos hacia la izquierda                   */
+/* -------------------------------------------------------------------------- */
+@keyframes marquee {
+  from {
+    transform: translateX(0%);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+/* -------------------------------------------------------------------------- */
+/* 4) Estilo de cada logo técnico (iconos/grayscale + transición)            */
+/* -------------------------------------------------------------------------- */
+.tech-logo {
+  height: 60px; // altura fija para uniformidad
+  filter: grayscale(100%); // inicial: gris
+  transition: filter 0.2s ease; // transición suave al pasar mouse
+}
+
+.tech-logo:hover {
+  filter: grayscale(0%); // al hover, quita el gris
+}
+
+/* =============================================================================
+// EOF: components/_marquee.scss
+// ============================================================================= */

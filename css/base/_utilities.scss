@@ -1,0 +1,147 @@
+// =============================================================================
+//                         base/_utilities.scss
+// =============================================================================
+
+// Importamos variables en caso de que queramos usar alguna aquí (опcional)
+@use "variables" as v;
+
+/* -------------------------------------------------------------------------- */
+/* 4.1 – Animaciones y transiciones generales                                   */
+/* -------------------------------------------------------------------------- */
+
+/*
+.animate-fade {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 1.3s ease-out forwards;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+*/
+
+/* Si prefieres nombrar la animación con un namespace, por ejemplo: */
+
+.u-animate-fade {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 1.3s ease-out forwards;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* -------------------------------------------------------------------------- */
+/* 4.2 – Helpers de utilidad general                                           */
+/* -------------------------------------------------------------------------- */
+
+/* Clases utilitarias de texto (algunas ya las provee Bootstrap, pero si quieres custom): */
+
+.u-text-center {
+  text-align: center;
+}
+
+.u-text-right {
+  text-align: right;
+}
+
+.u-text-left {
+  text-align: left;
+}
+
+/* Margenes rápidos (en lugar de .mt-3 de Bootstrap, por si quieres variables propias): */
+
+.m-0 {
+  margin: 0 !important;
+}
+
+.mt-1 {
+  margin-top: 0.25rem !important;
+}
+
+.mt-2 {
+  margin-top: 0.5rem !important;
+}
+
+.mt-3 {
+  margin-top: 1rem !important;
+}
+
+.mt-4 {
+  margin-top: 1.5rem !important;
+}
+
+/* Similar para paddings (por si en algún lugar necesitas un helper rápido): */
+
+.p-0 {
+  padding: 0 !important;
+}
+
+.p-1 {
+  padding: 0.25rem !important;
+}
+
+.p-2 {
+  padding: 0.5rem !important;
+}
+
+.p-3 {
+  padding: 1rem !important;
+}
+
+.p-4 {
+  padding: 1.5rem !important;
+}
+
+/* -------------------------------------------------------------------------- */
+/* 4.3 – Helpers flex básicos                                                   */
+/* -------------------------------------------------------------------------- */
+
+.u-flex {
+  display: flex !important;
+}
+
+.u-flex-center {
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+}
+
+/* -------------------------------------------------------------------------- */
+/* 4.4 – Helpers para esconder/mostrar en responsive                            */
+/* -------------------------------------------------------------------------- */
+
+@media (max-width: 767px) {
+  .u-hide-sm {
+    display: none !important;
+  }
+}
+
+@media (min-width: 768px) {
+  .u-hide-md-up {
+    display: none !important;
+  }
+}
+
+/* -------------------------------------------------------------------------- */
+/* 4.5 – Otros Helpers que puedas necesitar                                      */
+/* -------------------------------------------------------------------------- */
+
+/* Si necesitas centrar verticalmente algo, etc. */
+
+.u-center-vertical {
+  display: flex;
+  align-items: center;
+}
+
+/* =============================================================================
+// EOF: base/_utilities.scss
+// ============================================================================= */

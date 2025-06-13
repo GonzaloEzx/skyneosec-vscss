@@ -1,0 +1,49 @@
+// =============================================================================
+//                           base/_variables.scss
+// =============================================================================
+
+// -------------------------------------
+// Colores principales
+// -------------------------------------
+$color-primary-bg: #1f2937; // Navbar y footer
+$color-secondary-bg: #d4c9be; // Fondo de “Nuestros Servicios”
+$color-quienes-bg: #f1efec; // Fondo de “Quiénes somos”
+$color-highlight: #fbbf24; // Amarillo (hover, iconos destacados)
+$color-dark-text: #030303; // Texto principal oscuro
+$color-light-text: #f9fafb; // Texto sobre fondos oscuros
+
+// Colores adicionales (opcionales)
+$color-danger: #dc2626; // Para casos de “text-danger”
+$color-success: #059669; // Verde para “Threat Hunting”
+$color-info: #0ea5e9; // Azul para “Gestión de Vulnerabilidades”
+$color-secondary-text: #6c757d; // Gris medio para textos mutados
+
+// -------------------------------------
+// Tipografía y tamaños
+// -------------------------------------
+$font-base: "Segoe UI", sans-serif;
+$fs-hero-title: 3rem; // Fuente del título del hero
+$fs-hero-lead: 1.25rem; // Fuente del subtítulo / párrafo del hero
+$fs-heading-md: 2rem; // Fuente de <h2> en “Quiénes somos”
+$fs-card-text: 1rem; // Fuente de párrafos dentro de cards
+
+// -------------------------------------
+// Bordes y radios
+// -------------------------------------
+$border-radius-base: 0.75rem; // Radio general de bordes (cards, botones, etc.)
+$border-radius-sm: 0.5rem; // Radio más pequeño (imágenes, etc.)
+
+// -------------------------------------
+// Sombras
+// -------------------------------------
+$shadow-card-hover: 0 1rem 2rem rgba(0, 0, 0, 0.15); // Sombra al hacer hover sobre tarjetas
+$shadow-image: 0 0.5rem 1rem rgba(0, 0, 0, 0.15); // Sombra para imágenes (Quiénes somos, etc.)
+
+// -------------------------------------
+// Opacidades / overlays
+// -------------------------------------
+$overlay-opacity: 0.5; // Ej.: capa semitransparente del hero (50% opacidad)
+
+// =============================================================================
+// Fin de base/_variables.scss
+// =============================================================================

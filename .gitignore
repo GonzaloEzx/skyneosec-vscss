@@ -1,0 +1,21 @@
+# Node
+/node_modules
+/package-lock.json
+
+# Composer
+/vendor
+/composer.lock
+
+# Sistema
+.DS_Store
+thumbs.db
+
+# IDE / Editor
+.vscode/
+*.log
+
+# Archivos de entorno
+.env
+
+# Notas
+/css/esquema.txt

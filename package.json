@@ -1,0 +1,6 @@
+{
+  "scripts": {
+    "build-css": "sass css/main.scss css/styles.css --no-source-map --style=compressed",
+    "watch-css": "sass --watch css/main.scss:css/styles.css"
+  }
+}
