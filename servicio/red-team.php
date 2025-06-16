@@ -9,7 +9,7 @@ $beneficios = [
     "Fortalecimiento de tus controles y procesos internos.",
     "Alineado a estándares como MITRE ATT&CK y OWASP."
 ];
-$imagen = "/img/red-team.jpg";
+$imagen = "../img/red-team.jpg";
 $articulo_url = "https://www.dragonjarcon.org/que-es-red-team/";
 $articulo_titulo = "¿Qué es Red Team?";
 $articulo_desc = "Lee este artículo completo para entender a fondo el concepto, diferencias con Pentest y beneficios empresariales.";
