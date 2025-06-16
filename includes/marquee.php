@@ -21,38 +21,3 @@
          </div>
      </div>
  </section>
- <style>
-     .marquee {
-         overflow: hidden;
-         position: relative;
-         width: 100%;
-         background-color: #1f2937;
-         padding: 2rem 0;
-     }
-
-     .marquee-content {
-         display: flex;
-         gap: 2rem;
-         animation: marquee 10s linear infinite;
-     }
-
-     @keyframes marquee {
-         from {
-             transform: translateX(0%);
-         }
-
-         to {
-             transform: translateX(-50%);
-         }
-     }
-
-     .tech-logo {
-         height: 60px;
-         filter: grayscale(100%);
-         transition: filter 0.3s ease;
-     }
-
-     .tech-logo:hover {
-         filter: grayscale(0%);
-     }
- </style>
