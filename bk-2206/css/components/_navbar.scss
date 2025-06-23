@@ -1,0 +1,39 @@
+/* NAVBAR */
+// css/components/_navbar.scss
+
+@use "../base/variables" as v; // <--- IMPORTA variables.scss en este partial, con alias "v"
+
+.navbar {
+  background-color: v.$color-primary-bg;
+  padding: 15px;
+}
+
+.navbar .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar .logo {
+  font-size: 1.8em;
+  color: v.$color-highlight;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.navbar .nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.navbar .nav-links a {
+  color: #d1d5db;
+  text-decoration: none;
+  font-size: 1em;
+  transition: color 0.3s ease;
+}
+
+.navbar .nav-links a:hover {
+  color: v.$color-highlight;
+}

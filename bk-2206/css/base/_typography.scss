@@ -1,0 +1,65 @@
+// =============================================================================
+//                         base/_typography.scss
+// =============================================================================
+
+// Importamos variables para acceder a colores y tipografías
+@use "variables" as v;
+
+// Estilos globales para el <body>
+body {
+  font-family: v.$font-base; // "Segoe UI", sans-serif
+  color: v.$color-dark-text; // #030303
+  line-height: 1.6;
+  margin: 0; // Aseguramos que reset ya eliminó márgenes
+  padding: 0;
+}
+
+// Encabezados (h1–h6) heredarán la fuente base y tendrán margenes inferiores
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: v.$font-base;
+  color: v.$color-dark-text;
+  margin: 0 0 1rem 0; // margen inferior para separarse del siguiente párrafo
+  line-height: 1.2;
+}
+
+// Ajustes específicos para h2 (se usa en “Quiénes somos”)
+h2 {
+  font-size: v.$fs-heading-md; // 2rem
+  font-weight: 700;
+}
+
+// Párrafos (<p>) con margen inferior y color definido
+p {
+  margin: 0 0 1rem 0;
+  color: v.$color-dark-text;
+  font-size: v.$fs-card-text; // 1rem
+  line-height: 1.6;
+}
+
+// Enlaces (<a>) sin subrayado y con transición de color
+a {
+  text-decoration: none;
+  color: inherit; // Hereda el color del padre (suele ser negro o el que defina Bootstrap)
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: v.$color-highlight; // Amarillo #fbbf24 al pasar el mouse
+}
+
+// Listas sin estilo de lista por defecto (si quisieras un reset extra)
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+// =============================================================================
+// EOF: base/_typography.scss
+// =============================================================================

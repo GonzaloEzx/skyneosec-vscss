@@ -1,0 +1,8 @@
+@use "../base/variables" as v; // <--- IMPORTA variables.scss en este partial, con alias "v"
+
+footer {
+  background-color: v.$color-primary-bg; /* si lo quieres oscuro */
+  color: v.$color-light-text;
+  text-align: center;
+  padding: 1rem 0;
+}

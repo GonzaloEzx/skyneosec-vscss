@@ -1,0 +1,87 @@
+// =============================================================================
+//                            components/_hero.scss
+// =============================================================================
+
+// Importamos variables para colores y dimensiones
+@use "../base/variables" as v;
+
+/* -------------------------------------------------------------------------- */
+/* 5.1 – Hero con video: contenedor y altura                                  */
+/* -------------------------------------------------------------------------- */
+
+.hero-video {
+  position: relative;
+  width: 100%;
+  height: 85vh; // si quieres cambiarlo a 70vh, hazlo aquí o en responsive
+  overflow: hidden;
+}
+
+/* En pantallas grandes, reducimos la altura ligeramente */
+@media (min-width: 992px) {
+  .hero-video {
+    height: 70vh;
+  }
+}
+
+/* -------------------------------------------------------------------------- */
+/* 5.2 – Video ocupando todo el espacio                                       */
+/* -------------------------------------------------------------------------- */
+
+.hero-video video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* -------------------------------------------------------------------------- */
+/* 5.3 – Capa semitransparente encima del video                                */
+/* -------------------------------------------------------------------------- */
+
+.hero-video::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, v.$overlay-opacity); // 50% de opacidad
+  z-index: 1;
+}
+
+/* -------------------------------------------------------------------------- */
+/* 5.4 – Contenido centrado sobre el video                                     */
+/* -------------------------------------------------------------------------- */
+
+.hero-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: v.$color-light-text; // #f9fafb
+  text-align: center;
+  z-index: 2;
+  padding: 0 1rem; // espacio lateral en pantallas pequeñas
+}
+
+/* Título principal del hero */
+.hero-content h1 {
+  font-size: v.$fs-hero-title; // 3rem
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+/* Subtítulo / párrafo del hero */
+.hero-content p {
+  font-size: v.$fs-hero-lead; // 1.25rem
+  margin-bottom: 1.5rem;
+}
+
+/* Botón CTA dentro del hero */
+.hero-content .btn {
+  font-size: 1.1rem;
+  padding: 0.75rem 1.5rem;
+}
+
+/* =============================================================================
+// EOF: components/_hero.scss
+// ============================================================================= */

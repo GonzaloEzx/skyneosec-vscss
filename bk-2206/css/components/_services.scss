@@ -1,0 +1,119 @@
+@use "../base/variables" as v;
+
+// components/_services.scss
+
+.servicios-home {
+  background-color: #0d1b2a;
+  padding: 4rem 0;
+
+  h2 {
+    color: #f8f9fa;
+    font-size: 2.2rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+  }
+
+  .card {
+    background-color: #1c2838;
+    border: none;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+
+    &:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
+    }
+
+    .card-title {
+      color: #ffc107;
+      font-size: 1.1rem;
+      font-weight: 600;
+      margin-bottom: 0.75rem;
+
+      i {
+        font-size: 1.2rem;
+        vertical-align: middle;
+      }
+    }
+
+    .card-body {
+      padding: 1.5rem;
+    }
+
+    p {
+      color: #dee2e6;
+      font-size: 0.95rem;
+    }
+
+    a {
+      color: #ffc107;
+      font-weight: 500;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+// components/_services.scss
+
+.servicios-listado {
+  background-color: #d4c9be;
+  padding: 4rem 0;
+
+  h1 {
+    font-size: 2.2rem;
+    color: #212529;
+    font-weight: 700;
+    margin-bottom: 2.5rem;
+    text-align: center;
+  }
+
+  .card {
+    border-radius: v.$border-radius-base;
+    transition: all 0.3s ease;
+    background-color: #fff;
+
+    .card-title {
+      font-size: 1.1rem;
+      font-weight: 600;
+    }
+
+    .card-text {
+      color: v.$color-secondary-text;
+      font-size: v.$fs-card-text;
+    }
+
+    .mt-3 span {
+      font-size: 0.95rem;
+    }
+  }
+
+  .card-click:hover .card {
+    transform: translateY(-6px);
+    box-shadow: v.$shadow-card-hover;
+  }
+}
+
+.titulo-seccion {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 2.5rem;
+
+  i {
+    font-size: 2rem;
+    animation: pulse 1.6s infinite;
+  }
+
+  @keyframes pulse {
+    0%,
+    100% {
+      transform: scale(1);
+      opacity: 1;
+    }
+    50% {
+      transform: scale(1.1);
+      opacity: 0.8;
+    }
+  }
+}

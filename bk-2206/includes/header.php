@@ -16,6 +16,7 @@
   <header>
     <nav class="navbar navbar-expand-lg navbar-dark shadow-sm" style="background-color: #0f172a;">
       <div class="container">
+
         <a class="navbar-brand d-flex align-items-center fw-bold" href="/index.php">
           <img src="/img/huella.png" alt="" class="me-2" style="height: 32px;">Sky Neo Security
         </a>

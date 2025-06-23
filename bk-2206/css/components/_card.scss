@@ -1,0 +1,75 @@
+// =============================================================================
+//                           components/_card.scss
+// =============================================================================
+
+// Importamos las variables globales (colores, sombras, radios, etc.)
+@use "../base/variables" as v;
+
+/* -------------------------------------------------------------------------- */
+/* 7.1 – Estilos base de .card                                                */
+/* -------------------------------------------------------------------------- */
+.card {
+  border-radius: v.$border-radius-base; // 0.75rem (o 0.8rem según prefieras)
+  transition: all 0.3s ease; // transiciones suaves
+  background-color: #ffffff; // fondo blanco de la tarjeta
+  /* Si quieres un borde muy tenue, descomenta:
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  */
+}
+
+/* -------------------------------------------------------------------------- */
+/* 7.2 – Contenedor clickeable que engloba la card                            */
+/* -------------------------------------------------------------------------- */
+.card-click {
+  display: block; // para que todo el <a> sea clickeable
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* -------------------------------------------------------------------------- */
+/* 7.3 – Efecto hover cuando paso el mouse encima de .card-click               */
+/* -------------------------------------------------------------------------- */
+.card-click:hover .card {
+  transform: translateY(-6px); // “elevamos” la tarjeta 6px
+  box-shadow: v.$shadow-card-hover; // 0 1rem 2rem rgba(0, 0, 0, 0.15)
+}
+
+/* -------------------------------------------------------------------------- */
+/* 7.4 – Ajustes internos de .card-body (opcional)                             */
+/* -------------------------------------------------------------------------- */
+/* Si quieres más espacio interno o forzar ciertos padding, puedes añadir: */
+.card .card-body {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  /* El padding horizontal ya viene por Bootstrap (p-3 en tu HTML); si necesitas más: */
+  /* padding-left: 1.25rem;
+     padding-right: 1.25rem; */
+}
+
+/* -------------------------------------------------------------------------- */
+/* 7.5 – Títulos y textos dentro de la card                                   */
+/* -------------------------------------------------------------------------- */
+/* No hace falta redeclarar font-size aquí si ya lo manejas en base/_typography.scss,
+   pero puedes agregar estilos específicos para .card-title, .card-text, etc. */
+
+.card .card-title {
+  margin-bottom: 0.5rem;
+}
+
+.card .card-text {
+  margin-bottom: 0.75rem;
+  color: v.$color-secondary-text; // gris medio para el texto secundario
+  font-size: v.$fs-card-text; // 1rem
+}
+
+/* -------------------------------------------------------------------------- */
+/* 7.6 – Enlaces “Ver más →” al final de la card (opcional)                    */
+/* -------------------------------------------------------------------------- */
+/* Si quieres que el “Ver más →” se vea de un color y tamaño específicos: */
+.card .card-body .mt-3 span {
+  font-size: 0.95rem;
+  color: inherit; // hereda el mismo color que el título (text-primary, etc.)
+}
+
+/* =============================================================================
+// EOF: components/_card.scss
+// ============================================================================= */
