@@ -17,7 +17,7 @@
     <nav class="navbar navbar-expand-lg navbar-dark shadow-sm" style="background-color: #0f172a;">
       <div class="container">
         <a class="navbar-brand d-flex align-items-center fw-bold" href="/index.php">
-          <img src="/img/huella.png" alt="" class="me-2" style="height: 32px;">Sky Neo Security
+          <img src="img/huella.png" alt="" class="me-2" style="height: 32px;">Sky Neo Security
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMain" aria-controls="navbarMain" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
