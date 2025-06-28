@@ -2,59 +2,65 @@
 
 <main class="flex-grow-1 py-4" style="background-color: #D4C9BE;">
   <div class="container">
-    <h1 class="text-center fw-bold mb-4 text-dark">Nuestros Servicios</h1>
+    <h1 class="text-center fw-bold mb-4 text-dark">Servicios que ofrecemos</h1>
     <div class="row gx-4 gy-4">
 
       <?php
       $servicios = [
         [
           "titulo" => "Red Team",
-          "desc"   => "Simulaciones de ataques, para probar la resistencia de tu sistema de seguridad.",
+          "desc"   => "Simulaciones de ataques...",
           "color"  => "text-danger",
           "icon"   => "people-fill",
-          "url"    => "servicio/red-team.php"
+          "id"     => "modalRedTeam",
+          "include" => "includes/contenido-red-team.php"
         ],
         [
           "titulo" => "Seguridad Ofensiva",
-          "desc"   => "Auditorías, pruebas de intrusión y detección proactiva de vulnerabilidades.",
+          "desc"   => "Auditorías, pruebas de intrusión...",
           "color"  => "text-primary",
           "icon"   => "shield-shaded",
-          "url"    => "servicio/seguridad-ofensiva.php"
+          "id"     => "modalSeguridadOfensiva",
+          "include" => "includes/contenido-seguridad-ofensiva.php"
         ],
         [
           "titulo" => "Auditorías de Seguridad",
-          "desc"   => "Evaluaciones completas para garantizar cumplimiento y protección.",
+          "desc"   => "Evaluaciones completas...",
           "color"  => "text-warning",
           "icon"   => "clipboard-data-fill",
-          "url"    => "servicio/auditorias.php"
+          "id"     => "modalAuditorias",
+          "include" => "includes/contenido-auditorias.php"
         ],
         [
           "titulo" => "Threat Hunting",
-          "desc"   => "Búsqueda activa de amenazas avanzadas y análisis de comportamiento anómalo.",
+          "desc"   => "Búsqueda activa de amenazas...",
           "color"  => "text-success",
           "icon"   => "binoculars-fill",
-          "url"    => "servicio/threat-hunting.php"
+          "id"     => "modalThreatHunting",
+          "include" => "includes/contenido-threat-hunting.php"
         ],
         [
           "titulo" => "Respuesta a Incidentes",
-          "desc"   => "Mitigación rápida de incidentes y restauración de sistemas.",
-          "color"  => "text-secondary",
+          "desc"   => "Mitigación rápida de incidentes...",
+          "color"  => "text-light",
           "icon"   => "arrow-repeat",
-          "url"    => "servicio/respuesta.php"
+          "id"     => "modalRespuesta",
+          "include" => "includes/contenido-respuesta.php"
         ],
         [
           "titulo" => "Gestión de Vulnerabilidades",
-          "desc"   => "Identificación, clasificación y solución de riesgos en tiempo real.",
+          "desc"   => "Identificación, clasificación...",
           "color"  => "text-info",
           "icon"   => "bug-fill",
-          "url"    => "servicio/vulnerabilidades.php"
+          "id"     => "modalVulnerabilidades",
+          "include" => "includes/contenido-vulnerabilidades.php"
         ]
       ];
 
       foreach ($servicios as $s): ?>
         <div class="col-12 col-md-6 col-lg-4">
-          <a href="<?= $s['url'] ?>" class="text-decoration-none card-click">
-            <div class="card h-100 shadow-sm border-0 py-4 px-3">
+          <a type="button" class="card-click text-start text-decoration-none w-100 border-0 bg-transparent" data-bs-toggle="modal" data-bs-target="#<?= $s['id'] ?>">
+            <div class="card h-100">
               <div class="card-body d-flex flex-column">
                 <h5 class="card-title fw-semibold <?= $s['color'] ?>">
                   <i class="bi bi-<?= $s['icon'] ?> me-2"></i><?= $s['titulo'] ?>
@@ -66,11 +72,30 @@
               </div>
             </div>
           </a>
+
         </div>
       <?php endforeach; ?>
 
     </div>
   </div>
 </main>
+<?php foreach ($servicios as $s): ?>
+  <div class="modal fade" id="<?= $s['id'] ?>" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title fw-bold"><?= $s['titulo'] ?></h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+        </div>
+        <div class="modal-body">
+          <?php include $s['include']; ?>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+<?php endforeach; ?>
 
 <?php include 'includes/footer.php'; ?>
