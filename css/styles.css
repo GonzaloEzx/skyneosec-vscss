@@ -1,1 +1,534 @@
-html,body{height:100%;margin:0;padding:0}*,*::before,*::after{box-sizing:border-box}body{font-family:"Segoe UI",sans-serif;color:#030303;line-height:1.6;margin:0;padding:0}h1,h2,h3,h4,h5,h6{font-family:"Segoe UI",sans-serif;color:#030303;margin:0 0 1rem 0;line-height:1.2}h2{font-size:2rem;font-weight:700}p{margin:0 0 1rem 0;color:#030303;font-size:1rem;line-height:1.6}a{text-decoration:none;color:inherit;transition:color .3s ease}a:hover{color:#fbbf24}ul,ol{margin:0;padding:0;list-style:none}.u-animate-fade{opacity:0;transform:translateY(20px);animation:fadeInUp 1.3s ease-out forwards}@keyframes fadeInUp{to{opacity:1;transform:translateY(0)}}.u-text-center{text-align:center}.u-text-right{text-align:right}.u-text-left{text-align:left}.m-0{margin:0 !important}.mt-1{margin-top:.25rem !important}.mt-2{margin-top:.5rem !important}.mt-3{margin-top:1rem !important}.mt-4{margin-top:1.5rem !important}.p-0{padding:0 !important}.p-1{padding:.25rem !important}.p-2{padding:.5rem !important}.p-3{padding:1rem !important}.p-4{padding:1.5rem !important}.u-flex{display:flex !important}.u-flex-center{display:flex !important;justify-content:center;align-items:center}@media(max-width: 767px){.u-hide-sm{display:none !important}}@media(min-width: 768px){.u-hide-md-up{display:none !important}}.u-center-vertical{display:flex;align-items:center}.navbar{background-color:#1f2937;padding:15px}.navbar .container{display:flex;justify-content:space-between;align-items:center}.navbar .logo{font-size:1.8em;color:#fbbf24;text-decoration:none;font-weight:bold}.navbar .nav-links{list-style:none;display:flex;gap:20px}.navbar .nav-links a{color:#d1d5db;text-decoration:none;font-size:1em;transition:color .3s ease}.navbar .nav-links a:hover{color:#fbbf24}footer{background-color:#1f2937;color:#f9fafb;text-align:center;padding:1rem 0}.card{border-radius:.75rem;transition:all .3s ease;background-color:#959595}.card-click{display:block;transition:transform .3s ease,box-shadow .3s ease}.card-click:hover .card{transform:translateY(-6px);box-shadow:0 1rem 2rem rgba(0,0,0,.15)}.card .card-body{padding-top:1rem;padding-bottom:1rem}.card .card-title{margin-bottom:.5rem}.card .card-text{margin-bottom:.75rem;color:#6c757d;font-size:1rem}.card .card-body .mt-3 span{font-size:.95rem;color:inherit}.hero-video{position:relative;width:100%;height:85vh;overflow:hidden}@media(min-width: 992px){.hero-video{height:70vh}}.hero-video video{width:100%;height:100%;object-fit:cover}.hero-video::before{content:"";position:absolute;top:0;left:0;width:100%;height:100%;background-color:rgba(0,0,0,.5);z-index:1}.hero-content{position:absolute;top:50%;left:50%;transform:translate(-50%, -50%);color:#f9fafb;text-align:center;z-index:2;padding:0 1rem}.hero-content h1{font-size:4rem;font-weight:700;margin-bottom:1rem}.hero-content p{font-size:1.35rem;margin-bottom:1.5rem}.hero-content .btn{font-size:1.1rem;padding:.75rem 1.5rem}#quienes-somos{background-color:#d4c9be;padding:4rem 0}#quienes-somos .imagen-quienes{width:100%;max-height:400px;object-fit:cover;border-radius:.75rem;box-shadow:0 5px 15px rgba(0,0,0,.2)}#quienes-somos .contenido-quienes h2{font-size:2.25rem;font-weight:800;color:#111;margin-bottom:1.25rem}#quienes-somos .contenido-quienes p{font-size:1.05rem;color:#111;line-height:1.7;margin-bottom:1rem}#quienes-somos .contenido-quienes ul{list-style:none;padding:0;margin-top:1.5rem}#quienes-somos .contenido-quienes ul li{display:flex;align-items:center;font-size:1rem;margin-bottom:.75rem;color:#111}#quienes-somos .contenido-quienes ul li .icono{font-size:1.3rem;margin-right:.75rem}#quienes-somos .contenido-quienes ul li .icono-amarillo{color:#ffc107}#quienes-somos .contenido-quienes ul li .icono-azul{color:#0d6efd}#quienes-somos .contenido-quienes ul li .icono-celeste{color:#0dcaf0}.marquee{overflow:hidden;position:relative;width:100%;background-color:#1f2937;padding:2rem 0}.marquee-content{display:flex;gap:2rem;animation:marquee 10s linear infinite}@keyframes marquee{from{transform:translateX(0%)}to{transform:translateX(-50%)}}.tech-logo{height:60px;filter:grayscale(100%);transition:filter .2s ease}.tech-logo:hover{filter:grayscale(0%)}html,body{height:100%;margin:0;padding:0}body{display:flex;flex-direction:column;min-height:100vh;font-family:"Segoe UI",sans-serif}main{flex:1}.servicio-detalle{background-color:#121212;color:#f8f9fa}.servicio-detalle h1{font-size:2.4rem;font-weight:800;color:#fff}.servicio-detalle .lead{font-size:1.1rem;color:#ccc}.servicio-detalle .box-texto{background-color:#fdfdfd}.servicio-detalle .box-texto h3{color:#222}.servicio-detalle .box-texto p{font-size:1rem;color:#555}.servicio-detalle .beneficio-card{transition:transform .2s ease;background-color:#1e1e1e}.servicio-detalle .beneficio-card:hover{transform:translateY(-2px)}.servicio-detalle .beneficio-card i{flex-shrink:0}.servicio-detalle .beneficio-card span{font-size:1rem}.servicio-detalle .btn-warning{font-weight:600}
+@charset "UTF-8";
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", sans-serif;
+  color: #030303;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Segoe UI", sans-serif;
+  color: #030303;
+  margin: 0 0 1rem 0;
+  line-height: 1.2;
+}
+
+h2 {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+p {
+  margin: 0 0 1rem 0;
+  color: #030303;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: #fbbf24;
+}
+
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* -------------------------------------------------------------------------- */
+/* 4.1 – Animaciones y transiciones generales                                   */
+/* -------------------------------------------------------------------------- */
+/*
+.animate-fade {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 1.3s ease-out forwards;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+*/
+/* Si prefieres nombrar la animación con un namespace, por ejemplo: */
+.u-animate-fade {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 1.3s ease-out forwards;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+/* -------------------------------------------------------------------------- */
+/* 4.2 – Helpers de utilidad general                                           */
+/* -------------------------------------------------------------------------- */
+/* Clases utilitarias de texto (algunas ya las provee Bootstrap, pero si quieres custom): */
+.u-text-center {
+  text-align: center;
+}
+
+.u-text-right {
+  text-align: right;
+}
+
+.u-text-left {
+  text-align: left;
+}
+
+/* Margenes rápidos (en lugar de .mt-3 de Bootstrap, por si quieres variables propias): */
+.m-0 {
+  margin: 0 !important;
+}
+
+.mt-1 {
+  margin-top: 0.25rem !important;
+}
+
+.mt-2 {
+  margin-top: 0.5rem !important;
+}
+
+.mt-3 {
+  margin-top: 1rem !important;
+}
+
+.mt-4 {
+  margin-top: 1.5rem !important;
+}
+
+/* Similar para paddings (por si en algún lugar necesitas un helper rápido): */
+.p-0 {
+  padding: 0 !important;
+}
+
+.p-1 {
+  padding: 0.25rem !important;
+}
+
+.p-2 {
+  padding: 0.5rem !important;
+}
+
+.p-3 {
+  padding: 1rem !important;
+}
+
+.p-4 {
+  padding: 1.5rem !important;
+}
+
+/* -------------------------------------------------------------------------- */
+/* 4.3 – Helpers flex básicos                                                   */
+/* -------------------------------------------------------------------------- */
+.u-flex {
+  display: flex !important;
+}
+
+.u-flex-center {
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+}
+
+/* -------------------------------------------------------------------------- */
+/* 4.4 – Helpers para esconder/mostrar en responsive                            */
+/* -------------------------------------------------------------------------- */
+@media (max-width: 767px) {
+  .u-hide-sm {
+    display: none !important;
+  }
+}
+@media (min-width: 768px) {
+  .u-hide-md-up {
+    display: none !important;
+  }
+}
+/* -------------------------------------------------------------------------- */
+/* 4.5 – Otros Helpers que puedas necesitar                                      */
+/* -------------------------------------------------------------------------- */
+/* Si necesitas centrar verticalmente algo, etc. */
+.u-center-vertical {
+  display: flex;
+  align-items: center;
+}
+
+/* =============================================================================
+// EOF: base/_utilities.scss
+// ============================================================================= */
+/* NAVBAR */
+.navbar {
+  background-color: #1f2937;
+  padding: 15px;
+}
+
+.navbar .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar .logo {
+  font-size: 1.8em;
+  color: #fbbf24;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.navbar .nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.navbar .nav-links a {
+  color: #d1d5db;
+  text-decoration: none;
+  font-size: 1em;
+  transition: color 0.3s ease;
+}
+
+.navbar .nav-links a:hover {
+  color: #fbbf24;
+}
+
+footer {
+  background-color: #1f2937; /* si lo quieres oscuro */
+  color: #f9fafb;
+  text-align: center;
+  padding: 1rem 0;
+}
+
+/* -------------------------------------------------------------------------- */
+/* 7.1 – Estilos base de .card                                                */
+/* -------------------------------------------------------------------------- */
+.card {
+  border-radius: 0.75rem;
+  transition: all 0.3s ease;
+  background-color: #d4c9be;
+  border: 1px solid #1f2937;
+  /* Si quieres un borde muy tenue, descomenta:
+
+  */
+}
+
+/* -------------------------------------------------------------------------- */
+/* 7.2 – Contenedor clickeable que engloba la card                            */
+/* -------------------------------------------------------------------------- */
+.card-click {
+  display: block;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* -------------------------------------------------------------------------- */
+/* 7.3 – Efecto hover cuando paso el mouse encima de .card-click               */
+/* -------------------------------------------------------------------------- */
+.card-click:hover .card {
+  transform: translateY(-6px);
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15);
+}
+
+/* -------------------------------------------------------------------------- */
+/* 7.4 – Ajustes internos de .card-body (opcional)                             */
+/* -------------------------------------------------------------------------- */
+/* Si quieres más espacio interno o forzar ciertos padding, puedes añadir: */
+.card .card-body {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+  /* El padding horizontal ya viene por Bootstrap (p-3 en tu HTML); si necesitas más: */
+  /*  */
+}
+
+/* -------------------------------------------------------------------------- */
+/* 7.5 – Títulos y textos dentro de la card                                   */
+/* -------------------------------------------------------------------------- */
+/* No hace falta redeclarar font-size aquí si ya lo manejas en base/_typography.scss,
+   pero puedes agregar estilos específicos para .card-title, .card-text, etc. */
+.card .card-title {
+  margin-bottom: 0.5rem;
+}
+
+.card .card-text {
+  margin-bottom: 0.75rem;
+  color: #6c757d;
+  font-size: 1rem;
+}
+
+/* -------------------------------------------------------------------------- */
+/* 7.6 – Enlaces “Ver más →” al final de la card (opcional)                    */
+/* -------------------------------------------------------------------------- */
+/* Si quieres que el “Ver más →” se vea de un color y tamaño específicos: */
+.card .card-body .mt-3 span {
+  font-size: 0.95rem;
+  color: inherit;
+}
+
+/* =============================================================================
+// EOF: components/_card.scss
+// ============================================================================= */
+/* -------------------------------------------------------------------------- */
+/* 5.1 – Hero con video: contenedor y altura                                  */
+/* -------------------------------------------------------------------------- */
+.hero-video {
+  position: relative;
+  width: 100%;
+  height: 85vh;
+  overflow: hidden;
+}
+
+/* En pantallas grandes, reducimos la altura ligeramente */
+@media (min-width: 992px) {
+  .hero-video {
+    height: 70vh;
+  }
+}
+/* -------------------------------------------------------------------------- */
+/* 5.2 – Video ocupando todo el espacio                                       */
+/* -------------------------------------------------------------------------- */
+.hero-video video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* -------------------------------------------------------------------------- */
+/* 5.3 – Capa semitransparente encima del video                                */
+/* -------------------------------------------------------------------------- */
+.hero-video::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+/* -------------------------------------------------------------------------- */
+/* 5.4 – Contenido centrado sobre el video                                     */
+/* -------------------------------------------------------------------------- */
+.hero-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #f9fafb;
+  text-align: center;
+  z-index: 2;
+  padding: 0 1rem;
+}
+
+/* Título principal del hero */
+.hero-content h1 {
+  font-size: 4rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+/* Subtítulo / párrafo del hero */
+.hero-content p {
+  font-size: 1.35rem;
+  margin-bottom: 1.5rem;
+}
+
+/* Botón CTA dentro del hero */
+.hero-content .btn {
+  font-size: 1.1rem;
+  padding: 0.75rem 1.5rem;
+}
+
+/* =============================================================================
+// EOF: components/_hero.scss
+// ============================================================================= */
+#quienes-somos {
+  background-color: #d4c9be;
+  padding: 4rem 0;
+}
+#quienes-somos .imagen-quienes {
+  width: 100%;
+  max-height: 400px;
+  object-fit: cover;
+  border-radius: 0.75rem;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+#quienes-somos .contenido-quienes h2 {
+  font-size: 2.25rem;
+  font-weight: 800;
+  color: #111;
+  margin-bottom: 1.25rem;
+}
+#quienes-somos .contenido-quienes p {
+  font-size: 1.05rem;
+  color: #111;
+  line-height: 1.7;
+  margin-bottom: 1rem;
+}
+#quienes-somos .contenido-quienes ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 1.5rem;
+}
+#quienes-somos .contenido-quienes ul li {
+  display: flex;
+  align-items: center;
+  font-size: 1rem;
+  margin-bottom: 0.75rem;
+  color: #111;
+}
+#quienes-somos .contenido-quienes ul li .icono {
+  font-size: 1.3rem;
+  margin-right: 0.75rem;
+}
+#quienes-somos .contenido-quienes ul li .icono-amarillo {
+  color: #ffc107;
+}
+#quienes-somos .contenido-quienes ul li .icono-azul {
+  color: #0d6efd;
+}
+#quienes-somos .contenido-quienes ul li .icono-celeste {
+  color: #0dcaf0;
+}
+
+/* -------------------------------------------------------------------------- */
+/* 1) Contenedor principal del carrusel                                        */
+/* -------------------------------------------------------------------------- */
+.marquee {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  background-color: #1f2937;
+  padding: 2rem 0;
+}
+
+/* -------------------------------------------------------------------------- */
+/* 2) Contenido en scroll horizontal                                           */
+/* -------------------------------------------------------------------------- */
+.marquee-content {
+  display: flex;
+  gap: 2rem;
+  animation: marquee 10s linear infinite;
+}
+
+/* -------------------------------------------------------------------------- */
+/* 3) Keyframes para desplazar los logos hacia la izquierda                   */
+/* -------------------------------------------------------------------------- */
+@keyframes marquee {
+  from {
+    transform: translateX(0%);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+/* -------------------------------------------------------------------------- */
+/* 4) Estilo de cada logo técnico (iconos/grayscale + transición)            */
+/* -------------------------------------------------------------------------- */
+.tech-logo {
+  height: 60px;
+  filter: grayscale(100%);
+  transition: filter 0.2s ease;
+}
+
+.tech-logo:hover {
+  filter: grayscale(0%);
+}
+
+/* =============================================================================
+// EOF: components/_marquee.scss
+// ============================================================================= */
+/* ================================
+   LAYOUT GLOBAL – Footer siempre abajo
+   ================================ */
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  font-family: "Segoe UI", sans-serif;
+}
+
+main {
+  flex: 1;
+}
+
+.servicio-detalle {
+  background-color: #121212;
+  color: #f8f9fa;
+}
+.servicio-detalle h1 {
+  font-size: 2.4rem;
+  font-weight: 800;
+  color: #fff;
+}
+.servicio-detalle .lead {
+  font-size: 1.1rem;
+  color: #ccc;
+}
+.servicio-detalle .box-texto {
+  background-color: #fdfdfd;
+}
+.servicio-detalle .box-texto h3 {
+  color: #222;
+}
+.servicio-detalle .box-texto p {
+  font-size: 1rem;
+  color: #555;
+}
+.servicio-detalle .beneficio-card {
+  transition: transform 0.2s ease;
+  background-color: #1e1e1e;
+}
+.servicio-detalle .beneficio-card:hover {
+  transform: translateY(-2px);
+}
+.servicio-detalle .beneficio-card i {
+  flex-shrink: 0;
+}
+.servicio-detalle .beneficio-card span {
+  font-size: 1rem;
+}
+.servicio-detalle .btn-warning {
+  font-weight: 600;
+}
+
+/*# sourceMappingURL=styles.css.map */

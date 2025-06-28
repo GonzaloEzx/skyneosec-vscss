@@ -11,9 +11,8 @@
 .card {
   border-radius: v.$border-radius-base; // 0.75rem (o 0.8rem según prefieras)
   transition: all 0.3s ease; // transiciones suaves
-  background-color: v.$color-primary-bg; // fondo de la tarjeta
-  background: fixed;
-  border: 1px solid rgba(0, 0, 0, 0.05);
+  background-color: v.$color-secondary-bg; // fondo de la tarjeta
+  border: 1px solid v.$color-primary-bg;
   /* Si quieres un borde muy tenue, descomenta:
   
   */

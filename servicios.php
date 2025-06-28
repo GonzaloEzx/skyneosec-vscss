@@ -2,7 +2,7 @@
 
 <main class="flex-grow-1 py-4" style="background-color: #D4C9BE;">
   <div class="container">
-    <h1 class="text-center fw-bold mb-4 text-dark">Servicios que ofrecemos</h1>
+    <h2 class="text-center fw-bold mb-4 text-dark">Estos son los servicios que ofrecemos</h2>
     <div class="row gx-4 gy-4">
 
       <?php
@@ -10,7 +10,7 @@
         [
           "titulo" => "Red Team",
           "desc"   => "Simulaciones de ataques...",
-          "color"  => "text-danger",
+          "color"  => "text-dark",
           "icon"   => "people-fill",
           "id"     => "modalRedTeam",
           "include" => "includes/contenido-red-team.php"
@@ -18,7 +18,7 @@
         [
           "titulo" => "Seguridad Ofensiva",
           "desc"   => "Auditorías, pruebas de intrusión...",
-          "color"  => "text-primary",
+          "color"  => "text-dark",
           "icon"   => "shield-shaded",
           "id"     => "modalSeguridadOfensiva",
           "include" => "includes/contenido-seguridad-ofensiva.php"
@@ -26,7 +26,7 @@
         [
           "titulo" => "Auditorías de Seguridad",
           "desc"   => "Evaluaciones completas...",
-          "color"  => "text-warning",
+          "color"  => "text-dark",
           "icon"   => "clipboard-data-fill",
           "id"     => "modalAuditorias",
           "include" => "includes/contenido-auditorias.php"
@@ -34,7 +34,7 @@
         [
           "titulo" => "Threat Hunting",
           "desc"   => "Búsqueda activa de amenazas...",
-          "color"  => "text-success",
+          "color"  => "text-dark",
           "icon"   => "binoculars-fill",
           "id"     => "modalThreatHunting",
           "include" => "includes/contenido-threat-hunting.php"
@@ -42,7 +42,7 @@
         [
           "titulo" => "Respuesta a Incidentes",
           "desc"   => "Mitigación rápida de incidentes...",
-          "color"  => "text-light",
+          "color"  => "text-dark",
           "icon"   => "arrow-repeat",
           "id"     => "modalRespuesta",
           "include" => "includes/contenido-respuesta.php"
@@ -50,11 +50,11 @@
         [
           "titulo" => "Gestión de Vulnerabilidades",
           "desc"   => "Identificación, clasificación...",
-          "color"  => "text-info",
+          "color"  => "text-dark",
           "icon"   => "bug-fill",
           "id"     => "modalVulnerabilidades",
           "include" => "includes/contenido-vulnerabilidades.php"
-        ]
+        ],
       ];
 
       foreach ($servicios as $s): ?>
